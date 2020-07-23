@@ -1,0 +1,59 @@
+{% extends "layout.njk" %}
+
+{% block head %}
+<title>{{recipe.title}}</title>
+{% endblock head %}
+
+{% block content %}
+<div class="recipe">
+    <section class="header-recipe">
+        <img src="https://rocketseat-cdn.s3-sa-east-1.amazonaws.com/launchbase/receitas/{{ recipe.image }}" alt="{{ recipe.title }}">
+    </section>
+    <main>
+    <h1 class="title">{{ recipe.title }}</h1>
+    <h4 class="author">por {{ recipe.author }}</h4>
+
+
+    <div class="show-container">
+        <h3>Ingredientes: </h3>
+        <a class="show-ingredients">(ocultar)</a>
+    </div>
+    <div class="ingredients">
+        <ul>
+            {% for ingredient in recipe.ingredients %}
+            <li>{{ ingredient }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+    
+
+    <div class="show-container">
+    <h3>Modo de preparo: </h3>
+    <a class="show-preparation">(ocultar)</a>
+    </div>
+
+    <div class="preparation">
+        <ul>
+            {% for preparation in recipe.preparation %}
+            <li>{{ preparation }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    {% if recipe.information !== "" %}
+    <div class="show-container">
+        <h3>Informações adicionais: </h3>
+        <a class="show-information">(ocultar)</a>
+    </div>
+    <div class="information">
+        <p>{{ recipe.information }}</p>
+    </div>
+    {% endif %}
+    </main>
+</div>
+
+{% endblock content %}
+
+{% block scripts %}
+<script src="/scripts.js"></script>
+{% endblock scripts %}

@@ -1,0 +1,29 @@
+{% extends "layout.njk" %}
+
+{% block content %}
+<div class="cards">
+    {% for recipe in recipes %}
+        <div class="card" id="{{ recipe.id }}">
+            <img src="/assets/{{ recipe.image }}" alt="{{ recipe.title }}">
+            <h3>{{ recipe.title }}</h3>
+            <h5>por {{ recipe.author }}</h5>
+        </div>
+    {% endfor %}   
+    {% for recipe in recipes %}
+        <div class="card" id="{{ recipe.id }}">
+            <img src="/assets/{{ recipe.image }}" alt="{{ recipe.title }}">
+            <h3>{{ recipe.title }}</h3>
+            <h5>por {{ recipe.author }}</h5>
+        </div>
+    {% endfor %} 
+</div>
+
+<div class="modal-overlay">
+    <div class="modal">
+        
+    </div>
+</div>
+
+<script src="scripts.js"></script>
+
+{% endblock content %}

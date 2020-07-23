@@ -8,6 +8,7 @@
 
 body {
     font-family: Roboto;
+    padding: 0;
 }
 
 header {
@@ -17,8 +18,14 @@ header {
 }
 
 .content {
-    margin: 0 auto;
+    margin: 0 auto 200px;
     max-width: 940px;
+    height: 100vh;
+    padding: 0 20px;
+}
+
+.content header a {
+    text-decoration: none;
 }
 
 .logo {
@@ -42,6 +49,10 @@ header {
     color: #111111;
 }
 
+.menu a:active {
+    font-weight: bold;
+}
+
 .header {
     max-width: 940px;
     height: 366px;
@@ -49,6 +60,12 @@ header {
     border-radius: 30px;
     margin: 0 auto;
     position: relative;
+}
+
+.header-recipe img {
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
 }
 
 .header .text {
@@ -82,37 +99,116 @@ main h2 {
     grid-template-columns: 1fr 1fr 1fr;
     gap: 20px;
     margin-top: 20px;
+    cursor: pointer;
 }
 
 .card {
     max-width: 300px;
+    margin-bottom: 16px;
 }
 
 .card img {
     width: 100%;
-    height: 100%;
     border-radius: 15px;
 }
 
 .card h3 {
-    margin-top: 20px;
+    margin-top: 14px;
     font-weight: 400;
     font-size: 18px;
 }
 
-.card h5 {
+.card h5,
+.author,
+.show-container a {
     margin-top: 5px;
     font-weight: 400;
     font-size: 14px;
     color: #777777;
 }
 
+.about p,
+h3 {
+    margin-top: 20px;
+}
+
+.modal {
+    position: relative;
+}
+
+#close-modal {
+    cursor: pointer;
+    position: absolute;
+    right: 18px;
+}
+
+.modal-overlay {
+    visibility: hidden;
+    background-color: #00000091;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    position: absolute;
+}
+
+.modal-overlay .modal {
+    max-width: 660px;
+    max-height: 413px;
+    border-radius: 16px;
+    background-color: white;
+    margin: 25vh auto;
+    padding: 30px;
+}
+
+.modal img {
+    width: 600px;
+    height: 200px;
+}
+
+.active {
+    display: none;
+}
+
+.header-recipe {
+    max-width: 940px;
+    height: 250px;
+    margin: 0 auto;
+}
+
+.title {
+    text-align: center;
+    margin-top: 48px;
+}
+
+.author {
+    text-align: center;
+}
+
+.recipe h3 {
+    margin-bottom: 16px;
+}
+
+.recipe li {
+    margin-left: 16px;
+}
+
+.show-container {
+    display: flex;
+    align-items: center;
+}
+
+.show-container a {
+    cursor: pointer;
+    margin-left: 16px;
+}
+
 footer {
+    position: static;
     background: #EEEEEE;
     color: #999999;
     text-align: center;
     font-weight: 300;
     font-size: 14px;
-    padding: 20px;
-    margin-top: 50px;
+    padding: 20px 0px;
+    bottom: 0;
 }
