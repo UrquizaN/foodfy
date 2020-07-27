@@ -18,9 +18,8 @@ header {
 }
 
 .content {
-    margin: 0 auto 200px;
+    margin: 0 auto 40px;
     max-width: 940px;
-    height: 100vh;
     padding: 0 20px;
 }
 
@@ -49,7 +48,8 @@ header {
     color: #111111;
 }
 
-.menu a:active {
+.menu a:active,
+.menu-active {
     font-weight: bold;
 }
 
@@ -132,34 +132,6 @@ h3 {
     margin-top: 20px;
 }
 
-.modal {
-    position: relative;
-}
-
-#close-modal {
-    cursor: pointer;
-    position: absolute;
-    right: 18px;
-}
-
-.modal-overlay {
-    visibility: hidden;
-    background-color: #00000091;
-    width: 100vw;
-    height: 100vh;
-    top: 0;
-    position: absolute;
-}
-
-.modal-overlay .modal {
-    max-width: 660px;
-    max-height: 413px;
-    border-radius: 16px;
-    background-color: white;
-    margin: 25vh auto;
-    padding: 30px;
-}
-
 .modal img {
     width: 600px;
     height: 200px;
@@ -211,4 +183,5 @@ footer {
     font-size: 14px;
     padding: 20px 0px;
     bottom: 0;
+    margin: 0;
 }
