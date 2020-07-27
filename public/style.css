@@ -48,7 +48,6 @@ header {
     color: #111111;
 }
 
-.menu a:active,
 .menu-active {
     font-weight: bold;
 }
